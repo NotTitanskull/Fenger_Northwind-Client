@@ -1,17 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const discountRowEl = document.getElementById("discount-row");
-  const toastEl = document.getElementById("liveToast");
+document.addEventListener('DOMContentLoaded', function () {
+  const discountRowEl = document.getElementById('discount-row');
+  const toastEl = document.getElementById('liveToast');
 
-  const toastProductEl = document.getElementById("toastProduct");
-  const toastTitleEl = document.getElementById("toastTitle");
-  const toastCodeEl = document.getElementById("toastCode");
+  const toastProductEl = document.getElementById('toastProduct');
+  const toastTitleEl = document.getElementById('toastTitle');
+  const toastCodeEl = document.getElementById('toastCode');
 
   const toast = bootstrap.Toast.getOrCreateInstance(toastEl, {
     autohide: false,
   });
 
-  discountRowEl.addEventListener("click", function (event) {
-    if (event.target.classList.contains("discount")) {
+  discountRowEl.addEventListener('click', function (event) {
+    if (event.target.classList.contains('discount')) {
       event.preventDefault();
 
       const link = event.target;
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
       toast.hide();
     }
   });
